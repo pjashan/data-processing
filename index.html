@@ -2,12 +2,15 @@
 <html lang="en">
  <head>
      <title>Form Template</title>
-  <meta charset="utf-8" />
+ 
+ 
+     <meta charset="utf-8" />
   <meta name="robots" content="noindex,nofollow" />
   <meta name="viewport" content="width=device-width" />
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/nav.css" />
   <link rel="stylesheet" href="css/forms.css" />
+  <link rel="stylesheet" href="css/data-processing.css" />
  </head>
  <body>
      <header>
@@ -20,13 +23,39 @@
      </header>
      
    <main class="wrapper">
+     <div id="output">
      
     <form method= "get" action="" class="main-form">
+      <h3>buy a widget</h3>
+      <div id="widgets">
+        <div>
+            <b>Widget</b><br />
+            <p>Our Widgets are spring loaded and need no batteries!</p>
+            <p>At $3.99 they're a bargain!</p>
+            <p><label><input type="checkbox" name="Cart" value="Widget"  />  Add to cart  </label></p>
+            <div class="pic"><img src="images/widget.png" /></div>
+        </div>
+        <div>
+            <b>Sprocket</b><br />
+            <p>Our Sprockets are well made and hold up to extreme pressure!</p>
+            <p>They only cost $5.99!</p>
+            <p><label><input type="checkbox" name="Cart" value="sprocket"  />  Add to cart  </label></p>
+            <div class="pic"><img src="images/sprocket.png" /></div>
+        </div>
+        <div>
+            <b>Thingy</b><br />
+            <p>Our Thingys have many uses, and people come up with new ones all the time!</p>
+            <p>Such a deal at $1.99!</p>
+            <p><label><input type="checkbox" name="Cart" value="Thingy"  />  Add to cart  </label></p>
+            <div class="pic"><img src="images/thingy.png" /></div>
+        </div>
+    </div>
+    <h3>Shipping List</h3>
        <div><label for="FirstName">First Name</label>:<br />
-        <input type="text" name="FirstName" id="FirstName" placeholder="First Name" required="required" autofocus />
+        <input type="text" name="First_Name" id="FirstName" placeholder="First Name" required="required" autofocus />
        </div>
-       <div><label for="FirstName">Last Name</label>:<br />
-        <input type="text" name="LastName" id="LastName" placeholder="Last Name" required="required" />
+       <div><label for="LasttName">Last Name</label>:<br />
+        <input type="text" name="Last_Name" id="LastName" placeholder="Last Name" required="required" />
        </div>
        <div><label for="Email">Email</label>:<br />
         <input type="email" name="Email" id="Email" placeholder="Email" required="required" />
@@ -34,11 +63,14 @@
        <div><label for="Address">Address</label>:<br />
         <input type="address" name="Address" id="Address" placeholder="Please put your street address" required="required"  />
        </div>
+       <div><label for="City">City</label>:<br />
+        <input type="text" name="City" id="City" placeholder="Please put your icty here" required="required" />
+       </div>
        <div>
         <label for="State">State</label>:<br />
          <select name="State"  id="State" required="required">
-           <option value="">Please select your state</option>
-           <option value="Ak">
+           <option value=""> Please select your state </option>
+           <option value="Ak"> 
              Alaska
            </option>
            <option value="OR">
@@ -53,44 +85,31 @@
 
          </select>
        </div>
-       <div>
-         <fieldset>
-           <legend>Would you like to join our mailing list?</legend>
-           <label><input type="radio" name="JoinMalingList" value="Yes" required="required" />  Yes  </label> <br />
-           <label><input type="radio" name="JoinMalingList" value="No" />  No  </label>       
-          </fieldset>
+       <div><label for="PostalCode">Postal Code</label>:<br />
+        <input type="number" name="Postal_Code" id="PostalCode" placeholder="Please put your postal code here" required="required"  />
        </div>
-       <div>
-        <fieldset>
-          <legend>What are you interested in?</legend>
-          <label><input type="checkbox" name="InterestedIn" value="Website" required="required"   />  Website  </label> <br />
-          <label><input type="checkbox" name="InterestedIn" value="OnlineCalender" />  Online Calender </label> <br />  
-          <label><input type="checkbox" name="InterestedIn" value="ContactForm" />  Contact Form </label> <br />
-          <label><input type="checkbox" name="InterestedIn" value="Lollipops" />  Complimentary Lollipops  </label>      
-         </fieldset>
-      </div>
+       
+      
       <div>
-      <label for="Address">Address</label>:<br />
-      <textarea name="Comments" placeholder="Your opinion is important to us" cols="36" rows="4"></textarea>
+      <label for="Note">Note</label>:<br />
+      <textarea name="Note" placeholder="Your opinion is important to us" cols="36" rows="4"></textarea>
       </div>
 
          <div><input type="submit" value="Submit"/></div>
-         
-
- 
-     </form>
-        
+         </form>
+        </div>
   
      <footer>
-      <p><small>&copy; 2021 by 
-          YOUR NAME HERE, All Rights Reserved ~ 
+      <p><small>&copy; 2022 by 
+          Jashanpreet Singh, All Rights Reserved ~ 
           <a id="html-checker" href="#">Check HTML</a> ~ 
           <a id="css-checker" href="#">Check CSS</a></small>
      </p>
     </footer>
   </main>
-
+  <script src="js/data-processing.js"></script>
   <script src="js/main.js"></script>
+
      
  </body>
 </html>
